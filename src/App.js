@@ -13,14 +13,12 @@ class App extends Component {
   };
 
   switchNameHandler = (newName) => {
-    // console.log('was clicked');
-    // DONT use this this.state.persons[0].name = 'Maximilian';
     this.setState({
       persons: [
         { name: newName, age: 28 },
         { name: "Manu", age: 29 },
         { name: "Stephanie", age: 27 },
-      ]
+      ],
     });
   };
 
@@ -30,7 +28,7 @@ class App extends Component {
         { name: "Maxi", age: 28 },
         { name: event.target.value, age: 29 },
         { name: "Stephanie", age: 26 },
-      ]
+      ],
     });
   };
 
@@ -40,15 +38,16 @@ class App extends Component {
       font: "inherit",
       border: "1x solid blue",
       padding: "8px",
-      cursor: 'pointer'
+      cursor: "pointer",
     };
 
     return (
       <div className="App">
         <h1> Hi, I'm a react app</h1>
         <button
-        style={style}
-        onClick={() => this.switchNameHandler("Maximilian")}>
+          style={style}
+          onClick={() => this.switchNameHandler("Maximilian")}
+        >
           Switch name
         </button>
         <Person
@@ -70,7 +69,6 @@ class App extends Component {
         />
       </div>
     );
-    //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, ' Hi, I\'m a react app'));
   }
 }
 
